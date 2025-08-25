@@ -18,6 +18,7 @@ import type { Card, Exercise, Measurement } from './db/models';
 import NavBar from './components/NavBar';
 import Modal from './components/Modal';
 import AddCardForm, { type AddCardData } from './forms/AddCardForm';
+import { exportAllDataAsZip } from './lib/export';
 
 const ReactGridLayout = WidthProvider(RGL);
 
@@ -198,7 +199,13 @@ function App() {
           }}
         />
       </Modal>
-      <NavBar onAddCard={() => setAddCardModalOpen(true)} />
+      <NavBar
+        onAddCard={() => setAddCardModalOpen(true)}
+        triggerExport={() => {
+          if (!confirm('Are you sure you want to export all data?')) return;
+          exportAllDataAsZip(db);
+        }}
+      />
       <ReactGridLayout
         className="layout"
         layout={layout}
