@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  prettier:
+  linting:
     runs-on: ubuntu-latest
 
     defaults:
