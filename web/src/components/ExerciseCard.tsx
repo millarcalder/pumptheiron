@@ -121,7 +121,7 @@ const groupEntriesByDay = (entries: ExerciseEntry[], numDays: number): ExerciseE
 };
 
 const ExerciseCard: React.FC<ExerciseProps> = ({ data, style, addEntry }) => {
-  const { name, description, entries } = data;
+  const { name, entries } = data;
 
   const [inputWeight, setInputWeight] = React.useState<number>(
     entries[entries.length - 1]?.weight || 0,
