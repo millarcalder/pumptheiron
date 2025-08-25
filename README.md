@@ -13,8 +13,8 @@ Just track the metrics you care about! As simple as a notepad.
 ## Maintanence
 This project attempts to strike a good balance between the ease-of-development that dependencies can provide and the ease-of-maintenance of minimal dependencies. Only major dependencies that implement core functionality are included:
 
- - Build Tool - Vite
- - Reactivity - React
- - Data Storage - Dexie
- - Grid Layout - react-grid-layout
- - Graphs - Recharts
+ - Build Tool   - [Vite](https://vite.dev)
+ - Reactivity   - [React](https://react.dev)
+ - Data Storage - [Dexie](https://dexie.org)
+ - Grid Layout  - [react-grid-layout](https://github.com/react-grid-layout/react-grid-layout)
+ - Graphs       - [Recharts](https://recharts.org/en-US)
